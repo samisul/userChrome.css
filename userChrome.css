@@ -1,15 +1,18 @@
 :root {
-	--tab-font-size: 1em; /* Font size of the tab labels */
-	--tab-font-family: "JetBrainsMono Nerd Font", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
-	--max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
-	--show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
-	--tab-height: 20px;
+    --tab-font-size: 1em;
+    /* Font size of the tab labels */
+    --tab-font-family: "JetBrainsMono Nerd Font";
+    --max-tab-width: none;
+    /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+    --show-titlebar-buttons: none;
+    /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
+    --tab-height: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --accent-color: #191724;
-    	font-family: var(--tab-font-family) !important;    
+        font-family: var(--tab-font-family) !important;
     }
 }
 
@@ -21,21 +24,19 @@
 
 /*====== Aesthetics ======*/
 .tabbrowser-tab * {
-	border-radius: 0 !important;
-	font-family: var(--tab-font-family) !important;
+    border-radius: 0 !important;
+    font-family: var(--tab-font-family) !important;
 }
 
-#tabs-newtab-button > .toolbarbutton-icon,
-#tabbrowser-tabs .tabs-newtab-button > .toolbarbutton-icon{
-}
+#tabs-newtab-button>.toolbarbutton-icon,
+#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {}
 
 #TabsToolbar {
     display: flex !important;
     align-items: center !important;
 }
 
-.tab
-#navigator-toolbox {
+.tab #navigator-toolbox {
     border-bottom: none !important;
 }
 
@@ -77,20 +78,19 @@ toolbar#nav-bar {
 }
 
 toolbox {
-    height: 40px !important;
     display: flex !important;
     align-items: center !important;
 }
 
-:root {	
+:root {
     --tab-min-height: 30px !important;
-	--tab-max-height: 30px !important;
+    --tab-max-height: 30px !important;
 }
 
 /*====== UI Settings ======*/
 
 :root {
-    --navbarWidth: 500px;
+    --navbarWidth: 600px;
     /* Set width of navbar */
 }
 
@@ -134,25 +134,24 @@ toolbox {
 /*====== Simplifying interface ======*/
 
 .urlbarView {
-  display: none !important;
+    display: none !important;
 }
 
 .tab-close-button {
-  display: none;
+    border-radius: 10px !important;
+    /* display: none; */
 }
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
-  display: none !important;
+    display: none !important;
 }
 
-#nav-bar:not([tabs-hidden='true']) {
-  box-shadow: none;
+#nav-bar:not([tabs-hidden="true"]) {
+    box-shadow: none;
 }
 
-.tabbrowser-tab:is([visuallyselected='true'], [multiselected])
-  > .tab-stack
-  > .tab-background {
-  box-shadow: none !important;
+.tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
+    box-shadow: none !important;
 }
 
 /* Autohide back button when disabled */
@@ -185,7 +184,7 @@ toolbox {
 #alltabs-button,
 /* Menu to display all tabs at the end of tabs bar */
 .titlebar-buttonbox-container {
-/* Minimize, maximize, and close buttons */
+    /* Minimize, maximize, and close buttons */
     display: none !important;
 }
 
@@ -239,9 +238,8 @@ toolbox {
 #context-sendimage,
 #context-print-selection,
 toolbarbutton[label="Account"],
-toolbarbutton[label="Firefox View"]
-{
-  display: none !important;
+toolbarbutton[label="Firefox View"] {
+    display: none !important;
 }
 
 #context_bookmarkTab,
@@ -250,5 +248,5 @@ toolbarbutton[label="Firefox View"]
 #context_reopenInContainer,
 #context_selectAllTabs,
 #context_closeTabOptions {
-  display: none !important;
+    display: none !important;
 }
