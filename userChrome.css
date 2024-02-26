@@ -1,7 +1,15 @@
-/* Base color for the theme, dependent on whether it's a light theme or not */
+:root {
+	--tab-font-size: 1em; /* Font size of the tab labels */
+	--tab-font-family: "JetBrainsMono Nerd Font", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
+	--max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+	--show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
+	--tab-height: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --accent-color: #191724;
+    	font-family: var(--tab-font-family) !important;    
     }
 }
 
@@ -12,9 +20,27 @@
 }
 
 /*====== Aesthetics ======*/
+.tabbrowser-tab * {
+	border-radius: 0 !important;
+	font-family: var(--tab-font-family) !important;
+}
 
+#tabs-newtab-button > .toolbarbutton-icon,
+#tabbrowser-tabs .tabs-newtab-button > .toolbarbutton-icon{
+}
+
+#TabsToolbar {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.tab
 #navigator-toolbox {
     border-bottom: none !important;
+}
+
+#navigator-toolbox {
+    font-size: 0.86em !important;
 }
 
 #titlebar {
@@ -44,6 +70,21 @@ toolbar#nav-bar {
 
 .tab-background {
     border-radius: 10px !important;
+}
+
+#tab-background {
+    max-height: 30px !important;
+}
+
+toolbox {
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+:root {	
+    --tab-min-height: 30px !important;
+	--tab-max-height: 30px !important;
 }
 
 /*====== UI Settings ======*/
@@ -77,6 +118,7 @@ toolbar#nav-bar {
     #PersonalToolbar {
         order: 3;
         width: 100%;
+        background-color: var(--accent-color) !important;
     }
 
     /* Fix urlbar sometimes being misaligned */
@@ -90,6 +132,28 @@ toolbar#nav-bar {
 }
 
 /*====== Simplifying interface ======*/
+
+.urlbarView {
+  display: none !important;
+}
+
+.tab-close-button {
+  display: none;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+  display: none !important;
+}
+
+#nav-bar:not([tabs-hidden='true']) {
+  box-shadow: none;
+}
+
+.tabbrowser-tab:is([visuallyselected='true'], [multiselected])
+  > .tab-stack
+  > .tab-background {
+  box-shadow: none !important;
+}
 
 /* Autohide back button when disabled */
 #back-button,
@@ -120,10 +184,8 @@ toolbar#nav-bar {
 /* Search URL magnifying glass */
 #alltabs-button,
 /* Menu to display all tabs at the end of tabs bar */
-.titlebar-buttonbox-container
-
+.titlebar-buttonbox-container {
 /* Minimize, maximize, and close buttons */
-    {
     display: none !important;
 }
 
@@ -157,4 +219,36 @@ toolbar#nav-bar {
 
 #PanelUI-menu-button .toolbarbutton-badge-stack {
     padding: 0px !important;
+}
+
+/* Disable elements  */
+#context-navigation,
+#context-savepage,
+#context-pocket,
+#context-sendpagetodevice,
+#context-selectall,
+#context-viewsource,
+#context-inspect-a11y,
+#context-sendlinktodevice,
+#context-openlinkinusercontext-menu,
+#context-bookmarklink,
+#context-savelink,
+#context-savelinktopocket,
+#context-sendlinktodevice,
+#context-searchselect,
+#context-sendimage,
+#context-print-selection,
+toolbarbutton[label="Account"],
+toolbarbutton[label="Firefox View"]
+{
+  display: none !important;
+}
+
+#context_bookmarkTab,
+#context_moveTabOptions,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+#context_selectAllTabs,
+#context_closeTabOptions {
+  display: none !important;
 }
