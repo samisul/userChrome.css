@@ -30,6 +30,7 @@ toolbar#nav-bar {
 /* Sets the URL bar color */
 #urlbar {
     background: var(--accent-color) !important;
+    padding-inline: 6px !important;
 }
 
 #urlbar-background {
@@ -39,6 +40,10 @@ toolbar#nav-bar {
 
 #urlbar-input-container {
     border: none !important;
+}
+
+.tab-background {
+    border-radius: 10px !important;
 }
 
 /*====== UI Settings ======*/
