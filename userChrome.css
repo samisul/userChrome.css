@@ -1,7 +1,7 @@
 :root {
     --tab-font-size: 1em;
     /* Font size of the tab labels */
-    --tab-font-family: "JetBrainsMono Nerd Font";
+    --tab-font-family: "CaskaydiaCove Nerd Font";
     --max-tab-width: none;
     /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
     --show-titlebar-buttons: none;
@@ -16,14 +16,14 @@ toolbar, #titlebar {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent-color: #191724;
+        --accent-color: #002B36;
         font-family: var(--tab-font-family) !important;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent-color: #e0def4;
+        --accent-color: #768789;
     }
 }
 
