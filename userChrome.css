@@ -1,5 +1,4 @@
 :root {
-    --tab-font-size: 1em;
     /* Font size of the tab labels */
     --tab-font-family: "CaskaydiaCove Nerd Font";
     --max-tab-width: none;
@@ -46,7 +45,7 @@ toolbar, #titlebar {
 }
 
 #navigator-toolbox {
-    font-size: 0.86em !important;
+    font-size: 1em !important;
 }
 
 #titlebar {
