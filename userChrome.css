@@ -15,14 +15,14 @@ toolbar, #titlebar {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent-color: #002B36;
+        --accent-color: #191724;
         font-family: var(--tab-font-family) !important;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent-color: #768789;
+        --accent-color: #DFDDF3;
     }
 }
 
