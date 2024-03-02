@@ -1,183 +1,187 @@
 :root {
-    /* Font size of the tab labels */
-    --tab-font-family: "CaskaydiaCove Nerd Font";
-    --max-tab-width: none;
-    /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
-    --show-titlebar-buttons: none;
-    /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
-    --tab-height: 20px;
-      text-transform: lowercase !important;
+  /* Font size of the tab labels */
+  --tab-font-family: "CaskaydiaCove Nerd Font";
+  --max-tab-width: none;
+  /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+  --show-titlebar-buttons: none;
+  /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
+  --tab-height: 20px;
+  text-transform: lowercase !important;
 }
 
-toolbar, #titlebar {
-    width: 100%;
+toolbar,
+#titlebar {
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --accent-color: #191724;
-        font-family: var(--tab-font-family) !important;
-    }
+  :root {
+    --accent-color: #191724;
+    font-family: var(--tab-font-family) !important;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --accent-color: #DFDDF3;
-    }
+  :root {
+    --accent-color: #dfddf3;
+  }
 }
 
 /*====== Aesthetics ======*/
 .tabbrowser-tab * {
-    border-radius: 0 !important;
-    font-family: var(--tab-font-family) !important;
+  border-radius: 0 !important;
+  font-family: var(--tab-font-family) !important;
 }
 
-#tabs-newtab-button>.toolbarbutton-icon,
-#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {}
+#tabs-newtab-button > .toolbarbutton-icon,
+#tabbrowser-tabs .tabs-newtab-button > .toolbarbutton-icon {
+}
 
 #TabsToolbar {
-    display: flex !important;
-    align-items: center !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .tab #navigator-toolbox {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
 
 #navigator-toolbox {
-    font-size: 1em !important;
+  font-size: 1em !important;
 }
 
 #titlebar {
-    background: var(--accent-color) !important;
+  background: var(--accent-color) !important;
 }
 
 /* Sets the toolbar color */
 toolbar#nav-bar {
-    background: var(--accent-color) !important;
-    box-shadow: none !important;
+  background: var(--accent-color) !important;
+  box-shadow: none !important;
 }
 
 /* Sets the URL bar color */
 #urlbar {
-    background: var(--accent-color) !important;
-    padding-inline: 6px !important;
+  background: var(--accent-color) !important;
+  padding-inline: 6px !important;
 }
 
 #urlbar-background {
-    background: var(--accent-color) !important;
-    border: none !important;
+  background: var(--accent-color) !important;
+  border: none !important;
 }
 
 #urlbar-input-container {
-    border: none !important;
+  border: none !important;
 }
 
 .tab-background {
-    border-radius: 10px !important;
+  border-radius: 0px !important;
 }
 
 #tab-background {
-    max-height: 30px !important;
+  max-height: 30px !important;
 }
 
 toolbox {
-    display: flex !important;
-    align-items: center !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 #urlbar-input {
-      text-transform: lowercase !important;
+  text-transform: lowercase !important;
 }
 
 :root {
-    --tab-min-height: 30px !important;
-    --tab-max-height: 30px !important;
+  --tab-min-height: 30px !important;
+  --tab-max-height: 30px !important;
 }
 
 /*====== UI Settings ======*/
 
 :root {
-    --navbarWidth: 600px;
-    /* Set width of navbar */
+  --navbarWidth: 600px;
+  /* Set width of navbar */
 }
 
 /* If the window is wider than 1000px, use flex layout */
 @media (min-width: 1000px) {
-    #navigator-toolbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  #navigator-toolbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    /*  Url bar  */
-    #nav-bar {
-        order: 1;
-        width: var(--navbarWidth);
-    }
+  /*  Url bar  */
+  #nav-bar {
+    order: 1;
+    width: var(--navbarWidth);
+  }
 
-    /* Tab bar */
-    #titlebar {
-        order: 2;
-        width: calc(100vw - var(--navbarWidth) - 1px);
-    }
+  /* Tab bar */
+  #titlebar {
+    order: 2;
+    width: calc(100vw - var(--navbarWidth) - 1px);
+  }
 
-    /* Bookmarks bar */
-    #PersonalToolbar {
-        order: 3;
-        width: 100%;
-        background-color: var(--accent-color) !important;
-    }
+  /* Bookmarks bar */
+  #PersonalToolbar {
+    order: 3;
+    width: 100%;
+    background-color: var(--accent-color) !important;
+  }
 
-    /* Fix urlbar sometimes being misaligned */
-    :root[uidensity="compact"] #urlbar {
-        --urlbar-toolbar-height: 39.6px !important;
-    }
+  /* Fix urlbar sometimes being misaligned */
+  :root[uidensity="compact"] #urlbar {
+    --urlbar-toolbar-height: 39.6px !important;
+  }
 
-    :root[uidensity="touch"] #urlbar {
-        --urlbar-toolbar-height: 49px !important;
-    }
+  :root[uidensity="touch"] #urlbar {
+    --urlbar-toolbar-height: 49px !important;
+  }
 }
 
 /*====== Simplifying interface ======*/
 
 .urlbarView {
-    display: none !important;
+  display: none !important;
 }
 
 .tab-close-button {
-    border-radius: 10px !important;
-    /* display: none; */
+  border-radius: 0px !important;
+  /* display: none; */
 }
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
-    display: none !important;
+  display: none !important;
 }
 
 #nav-bar:not([tabs-hidden="true"]) {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-.tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
-    box-shadow: none !important;
+.tabbrowser-tab:is([visuallyselected="true"], [multiselected])
+  > .tab-stack
+  > .tab-background {
+  box-shadow: none !important;
 }
 
 /* Autohide back button when disabled */
 #back-button,
 #forward-button {
-    transform: scale(1, 1) !important;
-    transition:
-        margin-left 150ms var(--animation-easing-function),
-        opacity 250ms var(--animation-easing-function),
-        transform 350ms var(--animation-easing-function) !important;
+  transform: scale(1, 1) !important;
+  transition:
+    margin-left 150ms var(--animation-easing-function),
+    opacity 250ms var(--animation-easing-function),
+    transform 350ms var(--animation-easing-function) !important;
 }
 
 #back-button[disabled="true"],
 #forward-button[disabled="true"] {
-    margin-left: -34px !important;
-    opacity: 0 !important;
-    transform: scale(0.8, 0.8) !important;
-    pointer-events: none !important;
+  margin-left: -34px !important;
+  opacity: 0 !important;
+  transform: scale(0.8, 0.8) !important;
+  pointer-events: none !important;
 }
 
 /* Remove UI elements */
@@ -192,40 +196,42 @@ toolbox {
 #alltabs-button,
 /* Menu to display all tabs at the end of tabs bar */
 .titlebar-buttonbox-container {
-    /* Minimize, maximize, and close buttons */
-    display: none !important;
+  /* Minimize, maximize, and close buttons */
+  display: none !important;
 }
 
 #nav-bar {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /* Remove "padding" left and right from tabs */
 .titlebar-spacer {
-    display: none !important;
+  display: none !important;
 }
 
 /* Fix URL bar overlapping elements */
 #urlbar-container {
-    min-width: initial !important;
+  min-width: initial !important;
 }
 
 /* Remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
-    margin-inline-start: 0 !important;
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
 }
 
 /* Hide the hamburger menu */
 #PanelUI-menu-button {
-    padding: 0px !important;
+  padding: 0px !important;
 }
 
 #PanelUI-menu-button .toolbarbutton-icon {
-    width: 1px !important;
+  width: 1px !important;
 }
 
 #PanelUI-menu-button .toolbarbutton-badge-stack {
-    padding: 0px !important;
+  padding: 0px !important;
 }
 
 /* Disable elements  */
@@ -247,7 +253,7 @@ toolbox {
 #context-print-selection,
 toolbarbutton[label="Account"],
 toolbarbutton[label="Firefox View"] {
-    display: none !important;
+  display: none !important;
 }
 
 #context_bookmarkTab,
@@ -256,5 +262,5 @@ toolbarbutton[label="Firefox View"] {
 #context_reopenInContainer,
 #context_selectAllTabs,
 #context_closeTabOptions {
-    display: none !important;
+  display: none !important;
 }
