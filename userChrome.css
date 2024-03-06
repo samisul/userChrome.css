@@ -1,6 +1,6 @@
 :root {
   /* Font size of the tab labels */
-  --tab-font-family: "CaskaydiaCove Nerd Font";
+  --tab-font-family: "JetBrainsMono Nerd Font";
   --max-tab-width: none;
   /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
   --show-titlebar-buttons: none;
