@@ -1,6 +1,5 @@
 :root {
   /* Font size of the tab labels */
-  --tab-font-family: "JetBrainsMono Nerd Font";
   --max-tab-width: none;
   /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
   --show-titlebar-buttons: none;
@@ -16,21 +15,21 @@ toolbar,
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #191724;
-    font-family: var(--tab-font-family) !important;
+    /* --accent-color: #191724; */
+    --accent-color: #282828;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #dfddf3;
+    /* --accent-color: #dfddf3; */
+    --accent-color: #f9f5d7;
   }
 }
 
 /*====== Aesthetics ======*/
 .tabbrowser-tab * {
   border-radius: 0 !important;
-  font-family: var(--tab-font-family) !important;
 }
 
 #tabs-newtab-button > .toolbarbutton-icon,
@@ -47,7 +46,6 @@ toolbar,
 }
 
 #navigator-toolbox {
-  font-size: 1em !important;
 }
 
 #titlebar {
@@ -170,8 +168,7 @@ toolbox {
 #back-button,
 #forward-button {
   transform: scale(1, 1) !important;
-  transition:
-    margin-left 150ms var(--animation-easing-function),
+  transition: margin-left 150ms var(--animation-easing-function),
     opacity 250ms var(--animation-easing-function),
     transform 350ms var(--animation-easing-function) !important;
 }
