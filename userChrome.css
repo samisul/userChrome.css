@@ -16,7 +16,8 @@ toolbar,
 @media (prefers-color-scheme: dark) {
   :root {
     /* --accent-color: #191724; */
-    --accent-color: #282828;
+    /* --accent-color: #282828; */
+    --accent-color: #000000;
   }
 }
 
@@ -168,7 +169,8 @@ toolbox {
 #back-button,
 #forward-button {
   transform: scale(1, 1) !important;
-  transition: margin-left 150ms var(--animation-easing-function),
+  transition:
+    margin-left 150ms var(--animation-easing-function),
     opacity 250ms var(--animation-easing-function),
     transform 350ms var(--animation-easing-function) !important;
 }
